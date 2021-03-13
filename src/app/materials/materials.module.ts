@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatBadgeModule } from '@angular/material/badge'
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 const MaterialComponents = [
-  MatBadgeModule
+  MatProgressSpinnerModule
 ]
 
 @NgModule({

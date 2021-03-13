@@ -6,6 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'BlogMiniProject';
-  notifications="85"
+
+
+  showSpiinning = false
+
+  loadData() {
+    this.showSpiinning = true
+    
+    setTimeout(() => {
+      this.showSpiinning= false
+    },5000)
+  }
+
 }
