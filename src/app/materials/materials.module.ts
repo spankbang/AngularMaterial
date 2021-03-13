@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material/toolbar'
 
 const MaterialComponents = [
-  MatProgressSpinnerModule
+  MatToolbarModule
 ]
 
 @NgModule({

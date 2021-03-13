@@ -6,3 +6,11 @@
     justify-content: center;
     grid-gap:100px; 
 }
+
+
+.navbar {
+    justify-content: space-between;
+    span {
+        padding-right: 1rem;
+    }
+}

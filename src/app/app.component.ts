@@ -8,14 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-  showSpiinning = false
 
-  loadData() {
-    this.showSpiinning = true
-    
-    setTimeout(() => {
-      this.showSpiinning= false
-    },5000)
-  }
 
 }
