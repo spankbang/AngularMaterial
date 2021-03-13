@@ -1,44 +1,91 @@
-<div class="container">
-  <mat-list>
-    <mat-list-item> Item 1</mat-list-item>
-    <mat-list-item> Item 2</mat-list-item>
-    <mat-list-item> Item 3</mat-list-item>
-    <mat-list-item> Item 4</mat-list-item>
-  </mat-list>
-  
-  <br>
-  
-  <mat-list dense>
-    <mat-list-item> Item 1</mat-list-item>
-    <mat-list-item> Item 2</mat-list-item>
-    <mat-list-item> Item 3</mat-list-item>
-    <mat-list-item> Item 4</mat-list-item>
-  </mat-list>
-
-  <mat-nav-list>
-    <!-- hover over it. -->
-    <a mat-list-item href="#">Item 1</a>
-    <a mat-list-item href="#">Item 2</a>
-    <a mat-list-item href="#">Item 3</a>
-    <a mat-list-item href="#">Item 4</a>
-    <a mat-list-item href="#">Item 5</a>
-  </mat-nav-list>
+<h1>Simple usage of the cols and grid !</h1>
+<mat-grid-list cols="4">
 
 
-  <mat-list>
-    <mat-list-item>
-      <mat-icon matListIcon>home</mat-icon>
-      <h3 matLine>Heading</h3>
-      <p matLine>lorem30</p>
-    </mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item>
-      <mat-icon matListIcon>folder</mat-icon>
-      <h3 matLine>Heading 2</h3>
-      <p matLine>lorem 2</p>
-    </mat-list-item>
-  </mat-list>
+  <!-- The height of the row is equal to the width of the column.
+       But you can overwrite it by using the "rowHeight" attribute.
+    -->
+    <mat-grid-tile rowspan="2">
+      Tile 1
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
+    <mat-grid-tile>Tile 3</mat-grid-tile>
+    <mat-grid-tile>Tile 4</mat-grid-tile>
 
 
-<br><br><br><br>
-</div>
+
+</mat-grid-list>
+
+<br><br><br><br><br><br><br>
+<h1>Using the rowHeight attribute.</h1>
+
+<mat-grid-list cols="4" rowHeight="50px">
+
+  <mat-grid-tile rowspan="2">
+    Tile 1
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+
+
+
+</mat-grid-list>
+
+<br><br><br><br><br><br><br>
+<h1>Using the rowHeight attribute as a ratio.</h1>
+<h1></h1>
+<mat-grid-list cols="4" rowHeight="2:1">
+<!-- 2:1 implies that row height is half of the col width. -->
+  <mat-grid-tile rowspan="2">
+    Tile 1
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+
+
+
+</mat-grid-list>
+
+<br><br><br><br><br><br><br>
+<h1>Rows got fit into the 200px height.</h1>
+<h1></h1>
+<mat-grid-list cols="2" rowHeight="fit"  style="height: 200px;">
+  <!--rows got fit into the 200px height -->
+  <mat-grid-tile rowspan="2">
+    Tile 1
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+
+
+
+</mat-grid-list>
+
+
+<br><br><br><br><br><br><br>
+<h1>Gutter size !</h1>
+<mat-grid-list 
+        cols="2" 
+        rowHeight="fit" 
+        style="height: 200px;"
+        gutterSize="10px"
+>
+<!-- It is nothing but the additional spacing between the tiles. -->
+  <mat-grid-tile rowspan="2">
+    Tile 1
+  </mat-grid-tile>
+
+  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
+  <mat-grid-tile>Tile 3</mat-grid-tile>
+  <mat-grid-tile>Tile 4</mat-grid-tile>
+
+
+
+</mat-grid-list>
