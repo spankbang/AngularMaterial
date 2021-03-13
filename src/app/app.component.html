@@ -1,138 +1,29 @@
-<div class="container">
-  <br> <br>
-  <button mat-button>Hello fucking world !</button>
-  <br> <br>
-  <button mat-raised-button>Hello fucking world !</button>
-  <br> <br>
-  <button mat-flat-button>Hello fucking world !</button>
-  <br> <br>
-  <button mat-stroked-button>Hello fucking world !</button>
-</div>
-
-<br>
-<hr>
+<!-- import { MatIconModule } from '@angular/material/icon' -->
 
 
 <div class="container">
-  <br> <br>
-  <button mat-icon-button>ICON</button>
-  <br> <br>
-  <button mat-fab>ICON</button>
+  <mat-icon>
+    grade
+  </mat-icon>
 
-  <br> <br>
-  <button mat-mini-fab>ICON</button>
-</div>
-
-
-<br>
-<hr>
-
-
-<div class="container">
-  <button mat-button color="primary">primary</button>
-  <button mat-button color="accent">accent</button>
-  <button mat-button color="warn">warn</button>
 
   <br>
-  <!-- raised buttons -->
-  <button mat-raised-button color="primary">primary</button> &nbsp;&nbsp;&nbsp;
-  <button mat-raised-button color="accent">accent</button> &nbsp;&nbsp;&nbsp;
-  <button mat-raised-button color="warn">warn</button>
+  <!-- add the color ! -->
+  <mat-icon
+    color="primary"
+  >
+    grade
+  </mat-icon>
 
-</div>
-
-
-<br>
-<hr>
-
-
-<!-- To stop the rippples animations on button -->
-
-<div class="container">
-  <button mat-button disableRipple color="primary">primary</button>
-  <button mat-button disableRipple color="accent">accent</button>
-  <button mat-button disableRipple color="warn">warn</button>
-</div>
-<br>
-<hr>
-
-
-
-<!-- Button toggle ! -->
-<!-- import { MatButtonToggleModule } from '@angular/material/button-toggle'; -->
-<div class="container">
-
-
-
-
-  <mat-button-toggle>
-    Toggle
-  </mat-button-toggle>
-  &nbsp;&nbsp;&nbsp;
-  <mat-button-toggle #toggleBtn checked>
-    <!-- checked is false by default ! -->
-    Toggle
-  </mat-button-toggle>
-  {{toggleBtn.checked}}
-
-
-
-
-
-  &nbsp;&nbsp;&nbsp;
-  <mat-button-toggle #toggleBtn checked disableRipple>
-    <!-- To disbale the ripple attribute ! -->
-
-    Toggle
-  </mat-button-toggle>
-  {{toggleBtn.checked}}
-
-
-
-
-
-
-  &nbsp;&nbsp;&nbsp;
-  <mat-button-toggle #toggleBtn checked disabled>
-    <!-- To disbale the ripple attribute ! -->
-    Toggle
-  </mat-button-toggle>
-  {{toggleBtn.checked}}
 
   <br>
-  <hr>
-
-  &nbsp;&nbsp;&nbsp;
-  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
-    <mat-button-toggle value="angular"> Angular</mat-button-toggle>
-    <mat-button-toggle value="React"> React</mat-button-toggle>
-    <mat-button-toggle value="VUE"> VUE</mat-button-toggle>
-    <mat-button-toggle value="JS"> JS</mat-button-toggle>
-    <br>
-     : =
-    {{toggleGroup.value}}
-  </mat-button-toggle-group>
-
-  <br>
-  <hr>
-
-
-  <!-- multiple selection ! -->
-  
-  &nbsp;&nbsp;&nbsp;
-  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
-    <mat-button-toggle value="angular"> Angular</mat-button-toggle>
-    <mat-button-toggle value="React"> React</mat-button-toggle>
-    <mat-button-toggle value="VUE"> VUE</mat-button-toggle>
-    <mat-button-toggle value="JS"> JS</mat-button-toggle>
-    <br>
-    : =
-    {{toggleGroup.value}}
-  </mat-button-toggle-group>
-
-
+  <mat-icon>
+    zoom_in
+  </mat-icon>
+  <mat-icon>
+    zoom_out
+  </mat-icon>
 </div>
 
-<br>
-<hr>
-<br>
+
+
