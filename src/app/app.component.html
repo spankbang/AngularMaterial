@@ -1,33 +1,138 @@
-<div class="mat-display-4">mat-display-4</div>
-<div class="mat-display-3">mat-display-3</div>
-<div class="mat-display-2">mat-display-2</div>
-<div class="mat-display-1">mat-display-1</div>
+<div class="container">
+  <br> <br>
+  <button mat-button>Hello fucking world !</button>
+  <br> <br>
+  <button mat-raised-button>Hello fucking world !</button>
+  <br> <br>
+  <button mat-flat-button>Hello fucking world !</button>
+  <br> <br>
+  <button mat-stroked-button>Hello fucking world !</button>
+</div>
 
-<!-- Dislay-4 has the largets and decreases towards Display-1 -->
-
-
-<hr> <br> <br>
-
-<div class="mat-headline">This is the headline for h1 </div>
-<div class="mat-title">This is the heading for h2</div>
-<div class="mat-subheading-2">This is the heading for h3</div>
-<div class="mat-subheading-1">This is the heading for h4</div>
-
-
-<hr> <br> <br>
+<br>
+<hr>
 
 
-<div class="mat-body-1">This is the body text </div>
-<div class="mat-body-2">This is the bold body text </div>
-<div class="mat-caption">This is the caption text !</div>
+<div class="container">
+  <br> <br>
+  <button mat-icon-button>ICON</button>
+  <br> <br>
+  <button mat-fab>ICON</button>
 
-<hr> <br> <br>
+  <br> <br>
+  <button mat-mini-fab>ICON</button>
+</div>
 
 
-<div class="may-typography">
-  <h1>This is the h1 </h1>
-  <h2>This is the h2 </h2>
-  <h3>This is the h3 </h3>
-  <h4>This is the h4 </h4>
+<br>
+<hr>
+
+
+<div class="container">
+  <button mat-button color="primary">primary</button>
+  <button mat-button color="accent">accent</button>
+  <button mat-button color="warn">warn</button>
+
+  <br>
+  <!-- raised buttons -->
+  <button mat-raised-button color="primary">primary</button> &nbsp;&nbsp;&nbsp;
+  <button mat-raised-button color="accent">accent</button> &nbsp;&nbsp;&nbsp;
+  <button mat-raised-button color="warn">warn</button>
 
 </div>
+
+
+<br>
+<hr>
+
+
+<!-- To stop the rippples animations on button -->
+
+<div class="container">
+  <button mat-button disableRipple color="primary">primary</button>
+  <button mat-button disableRipple color="accent">accent</button>
+  <button mat-button disableRipple color="warn">warn</button>
+</div>
+<br>
+<hr>
+
+
+
+<!-- Button toggle ! -->
+<!-- import { MatButtonToggleModule } from '@angular/material/button-toggle'; -->
+<div class="container">
+
+
+
+
+  <mat-button-toggle>
+    Toggle
+  </mat-button-toggle>
+  &nbsp;&nbsp;&nbsp;
+  <mat-button-toggle #toggleBtn checked>
+    <!-- checked is false by default ! -->
+    Toggle
+  </mat-button-toggle>
+  {{toggleBtn.checked}}
+
+
+
+
+
+  &nbsp;&nbsp;&nbsp;
+  <mat-button-toggle #toggleBtn checked disableRipple>
+    <!-- To disbale the ripple attribute ! -->
+
+    Toggle
+  </mat-button-toggle>
+  {{toggleBtn.checked}}
+
+
+
+
+
+
+  &nbsp;&nbsp;&nbsp;
+  <mat-button-toggle #toggleBtn checked disabled>
+    <!-- To disbale the ripple attribute ! -->
+    Toggle
+  </mat-button-toggle>
+  {{toggleBtn.checked}}
+
+  <br>
+  <hr>
+
+  &nbsp;&nbsp;&nbsp;
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup">
+    <mat-button-toggle value="angular"> Angular</mat-button-toggle>
+    <mat-button-toggle value="React"> React</mat-button-toggle>
+    <mat-button-toggle value="VUE"> VUE</mat-button-toggle>
+    <mat-button-toggle value="JS"> JS</mat-button-toggle>
+    <br>
+     : =
+    {{toggleGroup.value}}
+  </mat-button-toggle-group>
+
+  <br>
+  <hr>
+
+
+  <!-- multiple selection ! -->
+  
+  &nbsp;&nbsp;&nbsp;
+  <mat-button-toggle-group #toggleGroup="matButtonToggleGroup" multiple>
+    <mat-button-toggle value="angular"> Angular</mat-button-toggle>
+    <mat-button-toggle value="React"> React</mat-button-toggle>
+    <mat-button-toggle value="VUE"> VUE</mat-button-toggle>
+    <mat-button-toggle value="JS"> JS</mat-button-toggle>
+    <br>
+    : =
+    {{toggleGroup.value}}
+  </mat-button-toggle-group>
+
+
+</div>
+
+<br>
+<hr>
+<br>
