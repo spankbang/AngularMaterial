@@ -1,116 +1,48 @@
 <div class="container">
-  <h1 style="text-align: center;">These following two expansion panels will work independently.(Without accordian)</h1>
-  <br>
-  <mat-expansion-panel>
+  <h1>Basic card</h1>
+  <mat-card>
+    basic card
+  </mat-card>
 
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Angular fundamentals
-      </mat-panel-title>
-      <mat-panel-description>
-        Total Duration : 3Hr
-      </mat-panel-description>
-    </mat-expansion-panel-header>
+  <br> <br>
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
-      corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
-      dolorem odit fugit?
-    </p>
+  <h1>Simple card</h1>
 
-    <mat-action-row>
-      <button mat-raised-button color="primary">Enroll</button>
-    </mat-action-row>
+  <mat-card>
+    <mat-card-title>
+      Card Title
+    </mat-card-title>
 
-  </mat-expansion-panel>
+    <mat-card-content>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eos ducimus iusto necessitatibus quisquam dolorum vel delectus laborum, vero maxime molestiae, consequuntur assumenda doloremque numquam?
+    </mat-card-content>
+    <!-- We have used the align attribute. -->
+    <mat-card-actions >
+      <button mat-raised-button>Login</button>
+    </mat-card-actions>
 
-
-  <mat-expansion-panel>
-
-    <mat-expansion-panel-header>
-      <mat-panel-title>
-        Angular fundamentals
-      </mat-panel-title>
-      <mat-panel-description>
-        Total Duration : 3Hr
-      </mat-panel-description>
-    </mat-expansion-panel-header>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
-      corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
-      dolorem odit fugit?
-    </p>
-
-    <mat-action-row>
-      <button mat-raised-button color="primary">Enroll</button>
-    </mat-action-row>
-
-  </mat-expansion-panel>
+  </mat-card>
 
 
-</div>
-
-
-
-
-
-
-
-<div class="container">
-  <h1 style="text-align: center;">These following two expansion panels will work dependently.(With accordian)</h1>
-  <h3 style="text-align: center;">But we can add the  "multi"=true to remove rhe accordion.</h3>
-  <br>
-
-  <mat-accordion>
-
-    <mat-expansion-panel>
+    <br> <br>
     
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Angular fundamentals
-        </mat-panel-title>
-        <mat-panel-description>
-          Total Duration : 3Hr
-        </mat-panel-description>
-      </mat-expansion-panel-header>
+    <h1>Simple card with right align button</h1>
     
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
-        corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
-        dolorem odit fugit?
-      </p>
+    <mat-card>
+      <mat-card-title>
+        Card Title
+      </mat-card-title>
     
-      <mat-action-row>
-        <button mat-raised-button color="primary">Enroll</button>
-      </mat-action-row>
+      <mat-card-content>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eos ducimus iusto necessitatibus quisquam dolorum
+        vel delectus laborum, vero maxime molestiae, consequuntur assumenda doloremque numquam?
+      </mat-card-content>
+      <!-- We have used the align attribute. -->
+      <mat-card-actions align="end">
+        <button mat-raised-button>Login</button>
+      </mat-card-actions>
     
-    </mat-expansion-panel>
-    
-    
-    <mat-expansion-panel>
-    
-      <mat-expansion-panel-header>
-        <mat-panel-title>
-          Angular fundamentals
-        </mat-panel-title>
-        <mat-panel-description>
-          Total Duration : 3Hr
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-    
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
-        corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
-        dolorem odit fugit?
-      </p>
-    
-      <mat-action-row>
-        <button mat-raised-button color="primary">Enroll</button>
-      </mat-action-row>
-    
-    </mat-expansion-panel>
+    </mat-card>
 
-  </mat-accordion>
 
 </div>
