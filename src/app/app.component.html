@@ -1,96 +1,22 @@
-<!-- import { MatSidenavModule } from '@angular/material/sidenav' -->
 
-<mat-sidenav-container> 
-
-  <mat-sidenav>
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    Main Content 
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
+<!-- this following has to be triggered by programmaticaly
+  import { MatMenuModule } from '@angular/material/menu'
+-->
 
 
-<br>
-
-<!-- Sidenav is always hidden by default ! -->
-
-
-
-<mat-sidenav-container>
-
-  <mat-sidenav [(opened)]="is_">
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="buttonClicked()" >Open</button>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-<br>
-
-<mat-sidenav-container>
-
-  <mat-sidenav mode="over" [(opened)]="is_">
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="buttonClicked()">Open</button>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-
-<br>
+<div class="container">
+  <mat-menu #appMenu="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
+    <button mat-menu-item>Backend</button>
+  </mat-menu>
+  
+  <button mat-raised-button [matMenuTriggerFor]="appMenu">Menu</button>
 
 
-<mat-sidenav-container>
+  <mat-menu #subMenu="matMenu" >
+    <button mat-menu-item>React</button>
+    <button mat-menu-item>Angular</button>
+    <button mat-menu-item>Vue</button>
+  </mat-menu>
 
-  <mat-sidenav mode="push" [(opened)]="is_">
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="buttonClicked()">Open</button>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-
-
-<br>
-
-
-<mat-sidenav-container>
-
-  <mat-sidenav mode="side" [(opened)]="is_">
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="buttonClicked()">Open</button>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-
-
-<br>
-
-
-<mat-sidenav-container>
-
-  <mat-sidenav #sidenav mode="side" [(opened)]="is_">
-    Sidenav
-  </mat-sidenav>
-
-  <mat-sidenav-content>
-    <button mat-raised-button (click)="sidenav.toggle()">Toggle for hamburger menu</button>
-  </mat-sidenav-content>
-
-</mat-sidenav-container>
-
-
-
-
+</div>
