@@ -1,91 +1,116 @@
-<h1>Simple usage of the cols and grid !</h1>
-<mat-grid-list cols="4">
+<div class="container">
+  <h1 style="text-align: center;">These following two expansion panels will work independently.(Without accordian)</h1>
+  <br>
+  <mat-expansion-panel>
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular fundamentals
+      </mat-panel-title>
+      <mat-panel-description>
+        Total Duration : 3Hr
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
+      corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
+      dolorem odit fugit?
+    </p>
+
+    <mat-action-row>
+      <button mat-raised-button color="primary">Enroll</button>
+    </mat-action-row>
+
+  </mat-expansion-panel>
 
 
-  <!-- The height of the row is equal to the width of the column.
-       But you can overwrite it by using the "rowHeight" attribute.
-    -->
-    <mat-grid-tile rowspan="2">
-      Tile 1
-    </mat-grid-tile>
+  <mat-expansion-panel>
 
-    <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
-    <mat-grid-tile>Tile 3</mat-grid-tile>
-    <mat-grid-tile>Tile 4</mat-grid-tile>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Angular fundamentals
+      </mat-panel-title>
+      <mat-panel-description>
+        Total Duration : 3Hr
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
+      corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
+      dolorem odit fugit?
+    </p>
 
+    <mat-action-row>
+      <button mat-raised-button color="primary">Enroll</button>
+    </mat-action-row>
 
-</mat-grid-list>
-
-<br><br><br><br><br><br><br>
-<h1>Using the rowHeight attribute.</h1>
-
-<mat-grid-list cols="4" rowHeight="50px">
-
-  <mat-grid-tile rowspan="2">
-    Tile 1
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
-  <mat-grid-tile>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
+  </mat-expansion-panel>
 
 
-
-</mat-grid-list>
-
-<br><br><br><br><br><br><br>
-<h1>Using the rowHeight attribute as a ratio.</h1>
-<h1></h1>
-<mat-grid-list cols="4" rowHeight="2:1">
-<!-- 2:1 implies that row height is half of the col width. -->
-  <mat-grid-tile rowspan="2">
-    Tile 1
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
-  <mat-grid-tile>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
-
-
-
-</mat-grid-list>
-
-<br><br><br><br><br><br><br>
-<h1>Rows got fit into the 200px height.</h1>
-<h1></h1>
-<mat-grid-list cols="2" rowHeight="fit"  style="height: 200px;">
-  <!--rows got fit into the 200px height -->
-  <mat-grid-tile rowspan="2">
-    Tile 1
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
-  <mat-grid-tile>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
+</div>
 
 
 
-</mat-grid-list>
-
-
-<br><br><br><br><br><br><br>
-<h1>Gutter size !</h1>
-<mat-grid-list 
-        cols="2" 
-        rowHeight="fit" 
-        style="height: 200px;"
-        gutterSize="10px"
->
-<!-- It is nothing but the additional spacing between the tiles. -->
-  <mat-grid-tile rowspan="2">
-    Tile 1
-  </mat-grid-tile>
-
-  <mat-grid-tile colspan="2">Tile 2</mat-grid-tile>
-  <mat-grid-tile>Tile 3</mat-grid-tile>
-  <mat-grid-tile>Tile 4</mat-grid-tile>
 
 
 
-</mat-grid-list>
+
+<div class="container">
+  <h1 style="text-align: center;">These following two expansion panels will work dependently.(With accordian)</h1>
+  <h3 style="text-align: center;">But we can add the  "multi"=true to remove rhe accordion.</h3>
+  <br>
+
+  <mat-accordion>
+
+    <mat-expansion-panel>
+    
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular fundamentals
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration : 3Hr
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
+        corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
+        dolorem odit fugit?
+      </p>
+    
+      <mat-action-row>
+        <button mat-raised-button color="primary">Enroll</button>
+      </mat-action-row>
+    
+    </mat-expansion-panel>
+    
+    
+    <mat-expansion-panel>
+    
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular fundamentals
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration : 3Hr
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+    
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, provident numquam, asperiores commodi
+        corporis, sunt facilis harum accusantium quo expedita laudantium voluptates dolores accusamus animi nam eveniet
+        dolorem odit fugit?
+      </p>
+    
+      <mat-action-row>
+        <button mat-raised-button color="primary">Enroll</button>
+      </mat-action-row>
+    
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+</div>
