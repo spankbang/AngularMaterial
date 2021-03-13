@@ -1,22 +1,44 @@
-
-<!-- this following has to be triggered by programmaticaly
-  import { MatMenuModule } from '@angular/material/menu'
--->
-
-
 <div class="container">
-  <mat-menu #appMenu="matMenu">
-    <button mat-menu-item [matMenuTriggerFor]="subMenu">Frontend</button>
-    <button mat-menu-item>Backend</button>
-  </mat-menu>
+  <mat-list>
+    <mat-list-item> Item 1</mat-list-item>
+    <mat-list-item> Item 2</mat-list-item>
+    <mat-list-item> Item 3</mat-list-item>
+    <mat-list-item> Item 4</mat-list-item>
+  </mat-list>
   
-  <button mat-raised-button [matMenuTriggerFor]="appMenu">Menu</button>
+  <br>
+  
+  <mat-list dense>
+    <mat-list-item> Item 1</mat-list-item>
+    <mat-list-item> Item 2</mat-list-item>
+    <mat-list-item> Item 3</mat-list-item>
+    <mat-list-item> Item 4</mat-list-item>
+  </mat-list>
+
+  <mat-nav-list>
+    <!-- hover over it. -->
+    <a mat-list-item href="#">Item 1</a>
+    <a mat-list-item href="#">Item 2</a>
+    <a mat-list-item href="#">Item 3</a>
+    <a mat-list-item href="#">Item 4</a>
+    <a mat-list-item href="#">Item 5</a>
+  </mat-nav-list>
 
 
-  <mat-menu #subMenu="matMenu" >
-    <button mat-menu-item>React</button>
-    <button mat-menu-item>Angular</button>
-    <button mat-menu-item>Vue</button>
-  </mat-menu>
+  <mat-list>
+    <mat-list-item>
+      <mat-icon matListIcon>home</mat-icon>
+      <h3 matLine>Heading</h3>
+      <p matLine>lorem30</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine>lorem 2</p>
+    </mat-list-item>
+  </mat-list>
 
+
+<br><br><br><br>
 </div>
