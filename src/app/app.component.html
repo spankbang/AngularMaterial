@@ -1,147 +1,113 @@
-<!-- import { MatInputModule } from '@angular/material/input' -->
+<!-- import { MatSelectModule } from '@angular/material/select' -->
+
+
 
 <div class="container">
 
+    <div>
+
+        <!-- We can also use the appearance and theming just like the input fields ,
+        But here we are not going to depth. -->
+
+        <h2 >Sample Select</h2>
+        <mat-form-field>
+            <mat-label>Topic</mat-label>
+            <mat-select>
+                <mat-option value="Angular">Angular</mat-option>
+                <mat-option value="React">React</mat-option>
+                <mat-option value="Vue">Vue</mat-option>
+                <mat-option value="Backbone">Backbone</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+
 
     <div>
-        Not required : &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2 >Sample Select with two-way binding.</h2>
         <mat-form-field>
-            <input matInput placeholder="Enter name.">
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedValue" >
+                <mat-option value="Angular">Angular</mat-option>
+                <mat-option value="React">React</mat-option>
+                <mat-option value="Vue">Vue</mat-option>
+                <mat-option value="Backbone">Backbone</mat-option>
+            </mat-select>
         </mat-form-field>
-        <br>
+            {{selectedValue}}
+
+    </div>
+
+    <div>
+        <h2>Sample Select with two-way binding. (with None)</h2>
+        <mat-form-field>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedValue">
+                <mat-option >None</mat-option>
+                <mat-option value="Angular">Angular</mat-option>
+                <mat-option value="React">React</mat-option>
+                <mat-option value="Vue">Vue</mat-option>
+                <mat-option value="Backbone">Backbone</mat-option>
+            </mat-select>
+        </mat-form-field>
+        {{selectedValue}}
+    
     </div>
     
-
     <div>
-        Required : &nbsp;&nbsp;&nbsp;&nbsp;
+        <h2>Set of options</h2>
         <mat-form-field>
-            <input matInput placeholder="Enter name." required>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedValue">
+                <mat-option>None</mat-option>
+                <mat-optgroup label="web">
+                    <mat-option value="Angular">Angular</mat-option>
+                    <mat-option value="React">React</mat-option>
+                    <mat-option value="Vue">Vue</mat-option>
+                    <mat-option value="Backbone">Backbone</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="web">
+                    <mat-option value="Angular">Angular</mat-option>
+                    <mat-option value="React">React</mat-option>
+                    <mat-option value="Vue">Vue</mat-option>
+                    <mat-option value="Backbone">Backbone</mat-option>
+                </mat-optgroup>
+            </mat-select>
         </mat-form-field>
-        <br>
-    </div>
+        {{selectedValue}}
     
+    </div>
 
-   <div>
-        With Label : &nbsp;&nbsp;&nbsp;&nbsp;
+    <div>
+        <h2>Set of options (multiple select) </h2>
         <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput>
+            <mat-label>Topic</mat-label>
+            <mat-select [(value)]="selectedValue" multiple>
+                <mat-option>None</mat-option>
+                <mat-optgroup label="web">
+                    <mat-option value="Angular">Angular</mat-option>
+                    <mat-option value="React">React</mat-option>
+                    <mat-option value="Vue">Vue</mat-option>
+                    <mat-option value="Backbone">Backbone</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="web">
+                    <mat-option value="Angular">Angular</mat-option>
+                    <mat-option value="React">React</mat-option>
+                    <mat-option value="Vue">Vue</mat-option>
+                    <mat-option value="Backbone">Backbone</mat-option>
+                </mat-optgroup>
+            </mat-select>
         </mat-form-field>
-        <br>
-   </div>
-
-    <div>
-        With Label (floatLabel="never") : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field floatLabel="never">
-            <mat-label>Name</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <br>
+        {{selectedValue}}
+    
     </div>
-
-    <div>
-        With Label (floatLabel="always") : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field floatLabel="always">
-            <mat-label>Name</mat-label>
-            <input matInput>
-        </mat-form-field>
-        <br>
-    </div>
-
-    <div>
-        Hide Required Marker : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field hideRequiredMarker>
-            <mat-label>Name</mat-label>
-            <input required matInput>
-        </mat-form-field>
-        <br>
-    </div>
-
-
-    <div>
-        With hint: &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint>Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-
-    </div>
-
-    <div>
-        With hint (align=end) : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field>
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-
-    </div>
-
-    <div>
-        With appearance=legacy : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="legacy">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-    </div>
-
-    <div>
-        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="standerd">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-    </div>
-
-
-    <div>
-        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="fill">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-
-    </div>
-
-    <div>
-        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="outline">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-    </div>
-
-    <div>
-        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="fill" color="primary">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-    </div>
-
-
-    <div>
-        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
-        <mat-form-field appearance="outline" color="accent">
-            <mat-label>Name</mat-label>
-            <input matInput>
-            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
-        </mat-form-field>
-        <br>
-    </div>
-
 
 </div>
+
+
+
+
+
+
+
+
