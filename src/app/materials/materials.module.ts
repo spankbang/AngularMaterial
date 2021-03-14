@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button'
-import { MatAutocompleteModule } from '@angular/material/autocomplete'
-import { MatInputModule } from '@angular/material/input'
-
+import { MatCheckboxModule } from '@angular/material/checkbox'
+import { MatDividerModule } from '@angular/material/divider'
+import { MatRadioModule } from '@angular/material/radio'
 
 
 
@@ -10,8 +10,9 @@ import { MatInputModule } from '@angular/material/input'
 const MaterialComponents = [
   
   MatButtonModule,
-  MatAutocompleteModule,
-  MatInputModule
+  MatDividerModule,
+  MatCheckboxModule,
+  MatRadioModule
 ]
 
 @NgModule({

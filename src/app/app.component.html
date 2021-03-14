@@ -1,36 +1,58 @@
-<!-- import { MatAutocompleteModule } from '@angular/material/autocomplete' -->
+<!-- import { MatCheckboxModule } from '@angular/material/checkbox' -->
+
 
 
 <div class="container">
 
     <div>
-        <h1>Not autocomplete</h1>
-        <form>
-            <mat-form-field>
-                <input type="text" matInput>
-            </mat-form-field>
-        </form>
+        <h1>Sample checkbox</h1>
+        <mat-checkbox>
+            Subscribe
+        </mat-checkbox>
+    </div>
+
+    <div>
+        <h1>labelPosition="before"</h1>
+        <mat-checkbox labelPosition="before">
+            Subscribe
+        </mat-checkbox>
     </div>
 
 
-
     <div>
-        <h1> autocomplete</h1>
-
-        <form>
-            <mat-form-field>
-                <input type="text" matInput [matAutocomplete]="auto">
-                <mat-autocomplete #auto="matAutocomplete">
-                    <mat-option *ngFor="let option of options" [value]="option" >
-                        {{option}}
-                    </mat-option>
-                </mat-autocomplete>
-            </mat-form-field>
-        </form>
+        <h1>color="primary"</h1>
+        <mat-checkbox color="primary">
+            Subscribe
+        </mat-checkbox>
     </div>
 
 </div>
 
 
+<mat-divider></mat-divider>
 
-     
+<div class="container">
+    <div>
+        <h1>Sample radio buttons.</h1>
+        <mat-radio-group>
+            <mat-radio-button value="Angular">Angular</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="React">React</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="Vue">Vue</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="Backbone">Backbone</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div>
+        <!-- You can also use the two way binding ! -->
+        <h1>Colors changed</h1>
+        <mat-radio-group>
+            <mat-radio-button color="primary"  value="Angular">Angular</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button color="warn"  value="React">React</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button  color="accent" value="Vue">Vue</mat-radio-button> &nbsp;&nbsp;&nbsp;&nbsp;
+            <mat-radio-button value="Backbone">Backbone</mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+</div>
+
+
