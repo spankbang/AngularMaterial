@@ -1,113 +1,36 @@
-<!-- import { MatSelectModule } from '@angular/material/select' -->
-
+<!-- import { MatAutocompleteModule } from '@angular/material/autocomplete' -->
 
 
 <div class="container">
 
     <div>
-
-        <!-- We can also use the appearance and theming just like the input fields ,
-        But here we are not going to depth. -->
-
-        <h2 >Sample Select</h2>
-        <mat-form-field>
-            <mat-label>Topic</mat-label>
-            <mat-select>
-                <mat-option value="Angular">Angular</mat-option>
-                <mat-option value="React">React</mat-option>
-                <mat-option value="Vue">Vue</mat-option>
-                <mat-option value="Backbone">Backbone</mat-option>
-            </mat-select>
-        </mat-form-field>
+        <h1>Not autocomplete</h1>
+        <form>
+            <mat-form-field>
+                <input type="text" matInput>
+            </mat-form-field>
+        </form>
     </div>
 
 
 
     <div>
-        <h2 >Sample Select with two-way binding.</h2>
-        <mat-form-field>
-            <mat-label>Topic</mat-label>
-            <mat-select [(value)]="selectedValue" >
-                <mat-option value="Angular">Angular</mat-option>
-                <mat-option value="React">React</mat-option>
-                <mat-option value="Vue">Vue</mat-option>
-                <mat-option value="Backbone">Backbone</mat-option>
-            </mat-select>
-        </mat-form-field>
-            {{selectedValue}}
+        <h1> autocomplete</h1>
 
-    </div>
-
-    <div>
-        <h2>Sample Select with two-way binding. (with None)</h2>
-        <mat-form-field>
-            <mat-label>Topic</mat-label>
-            <mat-select [(value)]="selectedValue">
-                <mat-option >None</mat-option>
-                <mat-option value="Angular">Angular</mat-option>
-                <mat-option value="React">React</mat-option>
-                <mat-option value="Vue">Vue</mat-option>
-                <mat-option value="Backbone">Backbone</mat-option>
-            </mat-select>
-        </mat-form-field>
-        {{selectedValue}}
-    
-    </div>
-    
-    <div>
-        <h2>Set of options</h2>
-        <mat-form-field>
-            <mat-label>Topic</mat-label>
-            <mat-select [(value)]="selectedValue">
-                <mat-option>None</mat-option>
-                <mat-optgroup label="web">
-                    <mat-option value="Angular">Angular</mat-option>
-                    <mat-option value="React">React</mat-option>
-                    <mat-option value="Vue">Vue</mat-option>
-                    <mat-option value="Backbone">Backbone</mat-option>
-                </mat-optgroup>
-                <mat-optgroup label="web">
-                    <mat-option value="Angular">Angular</mat-option>
-                    <mat-option value="React">React</mat-option>
-                    <mat-option value="Vue">Vue</mat-option>
-                    <mat-option value="Backbone">Backbone</mat-option>
-                </mat-optgroup>
-            </mat-select>
-        </mat-form-field>
-        {{selectedValue}}
-    
-    </div>
-
-    <div>
-        <h2>Set of options (multiple select) </h2>
-        <mat-form-field>
-            <mat-label>Topic</mat-label>
-            <mat-select [(value)]="selectedValue" multiple>
-                <mat-option>None</mat-option>
-                <mat-optgroup label="web">
-                    <mat-option value="Angular">Angular</mat-option>
-                    <mat-option value="React">React</mat-option>
-                    <mat-option value="Vue">Vue</mat-option>
-                    <mat-option value="Backbone">Backbone</mat-option>
-                </mat-optgroup>
-                <mat-optgroup label="web">
-                    <mat-option value="Angular">Angular</mat-option>
-                    <mat-option value="React">React</mat-option>
-                    <mat-option value="Vue">Vue</mat-option>
-                    <mat-option value="Backbone">Backbone</mat-option>
-                </mat-optgroup>
-            </mat-select>
-        </mat-form-field>
-        {{selectedValue}}
-    
+        <form>
+            <mat-form-field>
+                <input type="text" matInput [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of options" [value]="option" >
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+            </mat-form-field>
+        </form>
     </div>
 
 </div>
 
 
 
-
-
-
-
-
+     

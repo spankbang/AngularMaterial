@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  selectedValue:String
-
+  options: string[] = ["angular", "react", "vue"]
+  matAutoComplete:string
 
 }
