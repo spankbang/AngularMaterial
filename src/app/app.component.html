@@ -1,48 +1,8 @@
 <div class="container">
-  <h1>Basic card</h1>
-  <mat-card>
-    basic card
-  </mat-card>
-
-  <br> <br>
-
-  <h1>Simple card</h1>
-
-  <mat-card>
-    <mat-card-title>
-      Card Title
-    </mat-card-title>
-
-    <mat-card-content>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eos ducimus iusto necessitatibus quisquam dolorum vel delectus laborum, vero maxime molestiae, consequuntur assumenda doloremque numquam?
-    </mat-card-content>
-    <!-- We have used the align attribute. -->
-    <mat-card-actions >
-      <button mat-raised-button>Login</button>
-    </mat-card-actions>
-
-  </mat-card>
-
-
-    <br> <br>
-    
-    <h1>Simple card with right align button</h1>
-    
-    <mat-card>
-      <mat-card-title>
-        Card Title
-      </mat-card-title>
-    
-      <mat-card-content>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque eos ducimus iusto necessitatibus quisquam dolorum
-        vel delectus laborum, vero maxime molestiae, consequuntur assumenda doloremque numquam?
-      </mat-card-content>
-      <!-- We have used the align attribute. -->
-      <mat-card-actions align="end">
-        <button mat-raised-button>Login</button>
-      </mat-card-actions>
-    
-    </mat-card>
-
-
+    <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)" >
+        <mat-tab label="Angular">Angular Content</mat-tab>
+        <mat-tab label="React">React Content</mat-tab>
+        <mat-tab label="Vue">Vue Content</mat-tab>
+    </mat-tab-group>
+    This is the selected index : {{tabRef.selectedIndex}}
 </div>

@@ -8,10 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
 
-  is_ = false
-
-  buttonClicked() {
-    this.is_ = !this.is_
+  logChange(index ) {
+    console.log(index)
   }
 
 
