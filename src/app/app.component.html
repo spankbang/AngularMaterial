@@ -1,78 +1,147 @@
-<!-- import { MatStepperModule } from '@angular/material/stepper' -->
-
-<!-- 
-    There are the two types of stepper 
-        1. Horizontal
-        2. Vertical
- -->
-
+<!-- import { MatInputModule } from '@angular/material/input' -->
 
 <div class="container">
-    <h1 style="text-align: center;">Horizontal stepper</h1>
-    <mat-horizontal-stepper>
-        <mat-step label="Shipping Address">
-            <p>Shipping address Details</p>
-        </mat-step>
-        <mat-step label="Billing Address">
-            <p>Billing address details</p>
-        </mat-step>
-        <mat-step label="Place order">
-            <p>Placing order details.</p>
-        </mat-step>
-    </mat-horizontal-stepper>
-
-    <br> <br> <br>
-    <h1 style="text-align: center;">Horizontal stepper with prev and next buttons.</h1>
-    <mat-horizontal-stepper>
-        <mat-step label="Shipping Address">
-            <p>Shipping address Details</p>
-        </mat-step>
-        <mat-step label="Billing Address">
-            <p>Billing address details</p>
-            <!-- Buttons added here -->
-            <div>
-                <button matStepperPrevious
-                 mat-raised-button color="accent" >Back</button>
-                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button matStepperNext
-                 mat-raised-button color="accent">Next</button>
-            </div>
-
-        </mat-step>
-        <mat-step label="Place order">
-            <p>Placing order details.</p>
-        </mat-step>
-    </mat-horizontal-stepper>
-    <br> <br> <br>
 
 
+    <div>
+        Not required : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter name.">
+        </mat-form-field>
+        <br>
+    </div>
+    
 
-    <h1 style="text-align: center;">Horizontal linear with "true and false" conditoins .</h1>
-    <mat-horizontal-stepper linear>
-        <mat-step label="Shipping Address" completed=false>
-            <p>Shipping address Details</p>
-        </mat-step>
-        <mat-step label="Billing Address" completed=false>
-            <p>Billing address details</p>
-        </mat-step>
-        <mat-step label="Place order" completed=false>
-            <p>Placing order details.</p>
-        </mat-step>
-    </mat-horizontal-stepper>
-    <br> <br> <br>
+    <div>
+        Required : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <input matInput placeholder="Enter name." required>
+        </mat-form-field>
+        <br>
+    </div>
+    
 
-    <h1 style="text-align: center;">Vertical stepper</h1>
-    <mat-vertical-stepper>
-        <mat-step label="Shipping Address">
-            <p>Shipping address Details</p>
-        </mat-step>
-        <mat-step label="Billing Address">
-            <p>Billing address details</p>
-        </mat-step>
-        <mat-step label="Place order">
-            <p>Placing order details.</p>
-        </mat-step>
-    </mat-vertical-stepper>
+   <div>
+        With Label : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+   </div>
+
+    <div>
+        With Label (floatLabel="never") : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field floatLabel="never">
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+    </div>
+
+    <div>
+        With Label (floatLabel="always") : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field floatLabel="always">
+            <mat-label>Name</mat-label>
+            <input matInput>
+        </mat-form-field>
+        <br>
+    </div>
+
+    <div>
+        Hide Required Marker : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field hideRequiredMarker>
+            <mat-label>Name</mat-label>
+            <input required matInput>
+        </mat-form-field>
+        <br>
+    </div>
+
+
+    <div>
+        With hint: &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint>Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+
+    </div>
+
+    <div>
+        With hint (align=end) : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+
+    </div>
+
+    <div>
+        With appearance=legacy : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="legacy">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+    </div>
+
+    <div>
+        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="standerd">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+    </div>
+
+
+    <div>
+        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+
+    </div>
+
+    <div>
+        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+    </div>
+
+    <div>
+        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="fill" color="primary">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+    </div>
+
+
+    <div>
+        With appearance= : &nbsp;&nbsp;&nbsp;&nbsp;
+        <mat-form-field appearance="outline" color="accent">
+            <mat-label>Name</mat-label>
+            <input matInput>
+            <mat-hint align="end">Atlease 5 chars long.</mat-hint>
+        </mat-form-field>
+        <br>
+    </div>
 
 
 </div>
