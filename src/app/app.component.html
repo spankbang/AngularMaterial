@@ -1,8 +1,78 @@
+<!-- import { MatStepperModule } from '@angular/material/stepper' -->
+
+<!-- 
+    There are the two types of stepper 
+        1. Horizontal
+        2. Vertical
+ -->
+
+
 <div class="container">
-    <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)" >
-        <mat-tab label="Angular">Angular Content</mat-tab>
-        <mat-tab label="React">React Content</mat-tab>
-        <mat-tab label="Vue">Vue Content</mat-tab>
-    </mat-tab-group>
-    This is the selected index : {{tabRef.selectedIndex}}
+    <h1 style="text-align: center;">Horizontal stepper</h1>
+    <mat-horizontal-stepper>
+        <mat-step label="Shipping Address">
+            <p>Shipping address Details</p>
+        </mat-step>
+        <mat-step label="Billing Address">
+            <p>Billing address details</p>
+        </mat-step>
+        <mat-step label="Place order">
+            <p>Placing order details.</p>
+        </mat-step>
+    </mat-horizontal-stepper>
+
+    <br> <br> <br>
+    <h1 style="text-align: center;">Horizontal stepper with prev and next buttons.</h1>
+    <mat-horizontal-stepper>
+        <mat-step label="Shipping Address">
+            <p>Shipping address Details</p>
+        </mat-step>
+        <mat-step label="Billing Address">
+            <p>Billing address details</p>
+            <!-- Buttons added here -->
+            <div>
+                <button matStepperPrevious
+                 mat-raised-button color="accent" >Back</button>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button matStepperNext
+                 mat-raised-button color="accent">Next</button>
+            </div>
+
+        </mat-step>
+        <mat-step label="Place order">
+            <p>Placing order details.</p>
+        </mat-step>
+    </mat-horizontal-stepper>
+    <br> <br> <br>
+
+
+
+    <h1 style="text-align: center;">Horizontal linear with "true and false" conditoins .</h1>
+    <mat-horizontal-stepper linear>
+        <mat-step label="Shipping Address" completed=false>
+            <p>Shipping address Details</p>
+        </mat-step>
+        <mat-step label="Billing Address" completed=false>
+            <p>Billing address details</p>
+        </mat-step>
+        <mat-step label="Place order" completed=false>
+            <p>Placing order details.</p>
+        </mat-step>
+    </mat-horizontal-stepper>
+    <br> <br> <br>
+
+    <h1 style="text-align: center;">Vertical stepper</h1>
+    <mat-vertical-stepper>
+        <mat-step label="Shipping Address">
+            <p>Shipping address Details</p>
+        </mat-step>
+        <mat-step label="Billing Address">
+            <p>Billing address details</p>
+        </mat-step>
+        <mat-step label="Place order">
+            <p>Placing order details.</p>
+        </mat-step>
+    </mat-vertical-stepper>
+
+
 </div>
