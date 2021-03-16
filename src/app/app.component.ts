@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MatDialog } from "@angular/material/dialog"
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'BlogMiniProject';
+
+
+  constructor(
+    public dialog : MatDialog
+  ) {}
+
+
+  openDialog() {
+    let dialogref = this.dialog.open(DialogExampleComponent)
+    dialogref.afterClosed().subscribe((res) => {
+      console.log(res)
+    })
+  }
+
 }

@@ -4,28 +4,24 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialsModule } from './materials/materials.module';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
-
-// angular material imports
-import { MatButtonModule } from '@angular/material/button';
-// ----------------------------
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DialogExampleComponent
+  ],
+  entryComponents: [
+    DialogExampleComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
-    // angular material imports
-
-    MatButtonModule,
-    
-
-    // ------------------------
-
+    MaterialsModule
+ 
 
   ],
   providers: [],
