@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button'
-import { MatTableModule } from '@angular/material/table'
+import { ScrollingModule } from '@angular/cdk/scrolling'
+
 
 const materials = [
   MatButtonModule,
-  MatTableModule
+  ScrollingModule
 ]
 
 
